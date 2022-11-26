@@ -161,33 +161,33 @@
 <a href="#">¿Buscas un trabajo?<strong> <u class="text-dark"> Ver nuestras ofertas.</u></strong> </a>
 </article>
 
-<form class="col form">
-  <label for="nombre"> <small>Nombre Completo</small></label> <br>
-  <input type="nombre" class="form-control" id="FormControlInput1"><br>
+<form class="col form" id="form">
+  <label for="nombre" > <small>Nombre Completo</small></label> <br>
+  <input type="text" class="form-control" id="nameInput"><br>
  
-  <label for="exampleFormControlInput1" class="form-label"> <small>Email</small></label>
-  <input type="email" class="form-control" id="FormControlInput1"><br>
+  <label for="exampleFormControlInput1" class="form-label" id="mail"> <small>Email</small></label>
+  <input type="text" class="form-control" id="mailInput"><br>
   
-<label for="phone"><small>Teléfono</small></label><br>
- <input list="phone" name="phone" class="form-control" id="FormControlInput1">
+<label for="phone" id="phone"><small>Teléfono</small></label><br>
+ <input list="phone" name="phone" class="form-control" id="phoneInput" type="text">
  <datalist id="phone">
- <option value="+001">USA</option>
-  <option value="+0034">ESP</option>
-  <option value="+0057">COL</option>
-  <option value="+0027">ZBW</option>
-  <option value="+0021">LAS</option>
-  <option value="+0075">CTR</option>
-  <option value="+0059">ETP</option>
+ <option value="+01">USA</option>
+  <option value="+034">ESP</option>
+  <option value="+057">COL</option>
+  <option value="+027">ZBW</option>
+  <option value="+021">LAS</option>
+  <option value="+075">CTR</option>
+  <option value="+059">ETP</option>
 </datalist>
   <br>
   
 <br>
   <textarea class="form-control" id="FormControlTextarea1" rows="3" col-3 placeholder="¿En qué podemos ayudarte?"></textarea>
   <br>
-  <input type="checkbox" id="acepto" name="acepto" value="si">
+  <input type="checkbox" id="acepto" name="acepto" !checked>
   <label for="acepto "> <small> <a href="#">Acepto la <strong class="text-dark">Política de Privacidad</strong> y los<strong class="text-dark">Términos y condiciones</strong>.</a></small> </label>
 <br>
-<input class="subbtn" type="submit" value="Enviar">
+<input class="subbtn" type="submit" value="Enviar" id="submit">
 </form>
  </section>
 
@@ -224,7 +224,7 @@
   <a class="bot20" href="#">Todos los derechos reservados - Café de Altura SL - 2022</a>
 </div>
 </footer>
-
+<script src="./main.js"></script>
 </body>
 
 </html>
