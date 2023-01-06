@@ -10,22 +10,46 @@
   <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
   <link rel="stylesheet" href="./Styles/style.css">
   <title>Cafe de Altura</title>
-</head>
+ </head>
 
-<body class="container">
+ <body class="container"> 
   <nav class="row navbar navbar-expand-md " id="navigation">
     <div class="container-fluid d-flex">
-      Cafedealtura.com <img src="./Assets/images/taza cafe.png" alt="Logo coffe">
+     <a href=""><img src="./Assets/images/cafedealtura.com.png" alt=""><img src="./Assets/images/taza cafe.png" alt="Logo coffe"></a> 
       <nav class="nav">
         <a class="nav-link" href="./Tienda.html">Tienda</a>
         <a class="nav-link" href="./Suscripcion.html">Suscripción</a>
         <a class="nav-link" href="./paraempresas.html">Para empresas</a>
         <a class="nav-link" href="./sobrenosotros.html">Sobre nosotros</a>
         <a class="nav-link" href="./contacto.html">Contacto</a>
-        <a class="nav-link" href="#"> <img src="./Assets/images/IconIcon phone.png" alt="Icon phone">+34 919 49 05
+        <a class="nav-link" href="./index.html"> <img src="./Assets/images/IconIcon phone.png" alt="Icon phone">+34 919 49 05
           18</a>
         <a class="nav-link" href="#"><button class="btn btn-secondary btn-lg" type="button">Iniciar sesión</button></a>
-        <img src="./Assets/images/Carr.png" alt="Logo bag">
+        <div>
+          <img  onmouseover="showCart(this)" id="carBuy" src="./Assets/images/Carr.png" alt="Logo bag">
+          <div id="countCar"></div>
+        </div>
+        
+        <div  class="carProducts" id="carProductsId">
+          <div>
+              <div>
+                  <button onclick="closeBtn()" class="closeCar">X</button>
+              </div>
+              <div class="carAll">
+                  <h3>Mi Carrito</h3>
+                  
+              </div>
+          </div>
+
+          <div class="carItems">
+          </div>
+          <div>
+              <hr>
+              <h2>Total: <strong class="totalPrice"></strong>€</h2>
+          </div>
+      </div>
+
+
       </nav>
     </div>
   </nav>
@@ -68,30 +92,30 @@
     <h2>Novedades</h2>
 
     <div class="bagcoffe row">
-      <article class="col test1">
-        <img src="./Assets/images/Coffee bagCostaRica.png" alt="Icon bag">
-        <a class="bottom3" href="#">Costa Rica Tarrazú</a>
-        <p>9,00 €</p>
-        <a class="bottom4" href="#">Añadir</a>
+      <article class="col test1" id="costaRica">
+        <img src="./Assets/images/Coffee bagCostaRica.png" alt="Icon bag" id="imgCostaRica">
+        <a id="nameCaffe" data-id="1" class="bottom3" href="#">Costa Rica Tarrazú</a>
+        <p id="priceCr">9,00 €</p>
+        <a class="bottom4" href="#" id="sendCr">Añadir</a>
       </article>
 
       <article class="col test1">
         <img src="./Assets/images/Coffee bagColombia.png" alt="Icon bag">
-        <a class="bottom3" href="#">Colombia Los Naranjos</a>
+        <a class="bottom3" data-id="2" href="#">Colombia Los Naranjos</a>
         <p>9,00 €</p>
         <a class="bottom4" href="#">Añadir</a>
       </article>
 
       <article class="col test1">
         <img src="./Assets/images/Coffee bagLaos.png" alt="Icon bag">
-        <a class="bottom3" href="#">Laos Amanecer</a>
+        <a class="bottom3" data-id="3" href="#">Laos Amanecer</a>
         <p>9,00 €</p>
         <a class="bottom4" href="#">Añadir</a>
       </article>
 
       <article class="col test1">
         <img src="./Assets/images/Coffee bagEtiopia.png" alt="Icon bag">
-        <a class="bottom3" href="#"> Etiopía Yrgacheff </a>
+        <a class="bottom3" data-id="4" href="#"> Etiopía Yrgacheff </a>
         <p>9,00 €</p>
         <a class="bottom4" href="#">Añadir</a>
       </article>
@@ -99,7 +123,7 @@
     </div>
 
     <div class="row justify-content-center">
-      <a class="link1 col-3 ccb" href="#">Ver todos <img src="./Assets/images/IconFlecha.png" alt="row icon"></a>
+      <a class="link1 col-3 ccb" href="./Tienda.html">Ver todos <img src="./Assets/images/IconFlecha.png" alt="row icon"></a>
     </div>
 
 
@@ -178,7 +202,7 @@
   <option value="+021">LAS</option>
   <option value="+075">CTR</option>
   <option value="+059">ETP</option>
-</datalist>
+ </datalist>
   <br>
   
 <br>
@@ -224,7 +248,7 @@
   <a class="bot20" href="#">Todos los derechos reservados - Café de Altura SL - 2022</a>
 </div>
 </footer>
-<script src="./main.js"></script>
+<script src="./JS/main.js"></script>
 </body>
 
 </html>
