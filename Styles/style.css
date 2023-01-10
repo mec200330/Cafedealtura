@@ -4,6 +4,7 @@ body{
     margin-right: 0px;
     margin-bottom: 0px;
 }
+
 nav{
     display: flex;
     background-color: rgb(26, 23, 23);
@@ -675,14 +676,14 @@ left: 540.5px;
 top: 12px;
 }
 /* Carrito de Compra */
-#carProductsId{
+/* #carProductsId{
     display: none;
-}
+} */
 
-#carBuy:hover{
+/* #carBuy:hover{
     margin-bottom: 16px;
     transition-duration: .5s;
-}
+} */
 
 .cartProducts{
     position: absolute!important;
@@ -734,6 +735,28 @@ top: 12px;
 }
 .carProducts .item .item-content h5.cart-price{
     font-weight: 700;
+}
+.modal-container{
+    position: absolute;
+    background-color:  #515051;
+    color: white;
+    min-width: 290px;
+    padding: 0 18px;
+    top: 70px;
+    right: 50px;
+    font-family: 'Outfit';
+
+}
+
+.delete-product{
+    cursor: pointer;
+}
+
+.sumar{
+    cursor: pointer;
+}
+.restar{
+    cursor: pointer;
 }
 
 

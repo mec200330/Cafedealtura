@@ -24,30 +24,27 @@
               18</a>
             <a class="nav-link" href="#"><button class="btn btn-secondary btn-lg" type="button">Iniciar sesión</button></a>
             <div>
-              <img  onmouseover="showCart(this)" id="carBuy" src="./Assets/images/Carr.png" alt="Logo bag">
+              <img " id="carBuy" src="./Assets/images/Carr.png" alt="Logo bag"><span id="cantidadCarrito"  class="cantidadCarrito"></span>
               <div id="countCar"></div>
             </div>
             
             <div  class="carProducts" id="carProductsId">
               <div>
                   <div>
-                      <button onclick="closeBtn()" class="closeCar">X</button>
+                      <!-- <button onclick="closeBtn()" class="closeCar">X</button> -->
                   </div>
-                   <div class="carAll">
-                      <h3>Mi Carrito</h3> 
+                  <div class="carAll">
+                      <div id="shopContent"      class="carAll"></div>
+                      <div id="modal-container"  class="modal-container"></div>
                       
                   </div>
               </div>
     
               <div class="carItems">
-                  
-    
-    
-                  
               </div>
               <div>
                   <hr>
-                  <h2>Total: <strong class="totalPrice"></strong>€</h2>
+                  <!-- <h2>Total: <strong class="totalPrice"></strong>€</h2> -->
               </div>
           </div>
     
@@ -116,7 +113,7 @@
       </footer>
 
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script src="./JS/tienda.js"></script>
-      <script src="./JS/main.js"></script>
+      <script src="./JS/tienda.js"></script>   
+      
 </body>
 </html>

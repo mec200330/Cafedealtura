@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +10,6 @@
   <link rel="stylesheet" href="./Styles/style.css">
   <title>Cafe de Altura</title>
  </head>
-
  <body class="container"> 
   <nav class="row navbar navbar-expand-md " id="navigation">
     <div class="container-fluid d-flex">
@@ -26,26 +24,28 @@
           18</a>
         <a class="nav-link" href="#"><button class="btn btn-secondary btn-lg" type="button">Iniciar sesión</button></a>
         <div>
-          <img  onmouseover="showCart(this)" id="carBuy" src="./Assets/images/Carr.png" alt="Logo bag">
+          <img  id="carBuy" src="./Assets/images/Carr.png"  alt="Logo bag"  ><span id="cantidadCarrito"  class="cantidadCarrito"></span>
           <div id="countCar"></div>
         </div>
         
         <div  class="carProducts" id="carProductsId">
           <div>
               <div>
-                  <button onclick="closeBtn()" class="closeCar">X</button>
+                  <!-- <button onclick="closeBtn()" class="closeCar">X</button> -->
               </div>
-              <div class="carAll">
-                  <h3>Mi Carrito</h3>
+              <div class="carAll" id="carAll">
+                <div id="shopContent"      class="carAll"></div>
+                <div id="modal-container"  class="modal-container"></div>
+                  
                   
               </div>
           </div>
 
-          <div class="carItems">
+          <div class="carItems" id="carItems">
           </div>
           <div>
               <hr>
-              <h2>Total: <strong class="totalPrice"></strong>€</h2>
+              <!-- <h2>Total: <strong class="totalPrice"></strong>€</h2> -->
           </div>
       </div>
 
@@ -92,7 +92,7 @@
     <h2>Novedades</h2>
 
     <div class="bagcoffe row">
-      <article class="col test1" id="costaRica">
+      <!-- <article class="col test1" id="costaRica">
         <img src="./Assets/images/Coffee bagCostaRica.png" alt="Icon bag" id="imgCostaRica">
         <a id="nameCaffe" data-id="1" class="bottom3" href="#">Costa Rica Tarrazú</a>
         <p id="priceCr">9,00 €</p>
@@ -118,7 +118,7 @@
         <a class="bottom3" data-id="4" href="#"> Etiopía Yrgacheff </a>
         <p>9,00 €</p>
         <a class="bottom4" href="#">Añadir</a>
-      </article>
+      </article> -->
 
     </div>
 
@@ -248,7 +248,12 @@
   <a class="bot20" href="#">Todos los derechos reservados - Café de Altura SL - 2022</a>
 </div>
 </footer>
+
+      
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="./JS/main.js"></script>
+<script src="./JS/axios.js"></script>
+
 </body>
 
 </html>
