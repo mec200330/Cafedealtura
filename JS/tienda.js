@@ -66,7 +66,7 @@
     const verCarrito = document.getElementById("carBuy")
     const shopContent = document.getElementById("carProductsId")
     const modalContainer = document.getElementById("modal-container")
-    const cantidadCarrito = document.getElementById("cantidadCarrito")
+    // const cantidadCarrito = document.getElementById("cantidadCarrito")
     
     let carrito = JSON.parse(localStorage.getItem("carrito")) || []
     
@@ -82,6 +82,7 @@
          modalHeader.className = "carItems"
          modalHeader.innerHTML =`
           <h3 class="carItems">Carrito</h3>
+          <a class="nav-link" href="./cesta2.html">Tramitar Pedido</a>
      `
      modalContainer.append(modalHeader)
     

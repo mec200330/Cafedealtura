@@ -73,6 +73,7 @@ const pintarCarrito = () =>{
      modalHeader.className = "carItems"
      modalHeader.innerHTML =`
       <h3 class="carItems">Carrito</h3>
+      <a id="salto" class="nav-link" href="./cesta2.html">Tramitar Pedido</a>
  `
  modalContainer.append(modalHeader)
 
