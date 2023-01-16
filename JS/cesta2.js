@@ -47,6 +47,7 @@ axios
                  carrito.push({
                  img: `${productsCaffe[i].img_url}`,
                  nombre: `${productsCaffe[i].brand}`,
+                 conte: `Paquete de café, 250 gr`,
                  precio:`${productsCaffe[i].price}`*1,
                  id: `${productsCaffe[i]._id}`,
                  cantidad: `1`
@@ -63,8 +64,8 @@ const verCarrito = document.getElementById("carBuy")
 const shopContent = document.getElementById("carProductsId")
 const modalContainer = document.getElementById("modal-container")
 const cantidadCarrito = document.getElementById("cantidadCarrito")
-
-
+const subtotalCarrito = document.getElementById("total")
+const cestaContador = document.getElementById("cestacontador")
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || []
 
@@ -79,43 +80,34 @@ const pintarCarrito = () =>{
  `
  modalContainer.append(modalHeader)
 
- const modalButton = document.createElement("h1")
-//  modalButton.innerText="X"
- modalButton.className="carItems"
-
- modalHeader.append(modalButton)
-
- modalButton.addEventListener("click", ()=>{
-    modalContainer.style.display="none"
- 
- })
-
- 
-
  carrito.forEach((product)=>{
-       
+      
     let carritoContent = document.createElement("article")
+    carritoContent.innerHTML=""
+    carritoContent.className="items"
     carritoContent.innerHTML =`
     <p class="restar">-</p>
-    <p>Cantidad: ${product.cantidad}</p>
+    <p> ${product.cantidad}</p>
     <p class="sumar">+</p>
     <img src="${product.img}"> 
-    <h3>${product.nombre}</h3>
+    <a>${product.nombre}</a>
+    <p>Paquete de café, 250 gr</p>
     <p>${product.precio},00 €</p>
-    <p>Total:  ${product.cantidad*product.precio}, 00€</p>
+    <h3 class="total1">Total: ${product.cantidad*product.precio},00€</h3>
     <hr>
     `
-    modalContainer.append(carritoContent)
 
-    let restar = carritoContent.querySelector(".restar")
-    restar.addEventListener("click", ()=>{
-        if(product.cantidad >1){
+        modalContainer.append(carritoContent)
+
+          let restar = carritoContent.querySelector(".restar")
+         restar.addEventListener("click", ()=>{
+         if(product.cantidad >1){
             product.cantidad--
-        }
+         }
           saveLocal()
           pintarCarrito()
-     })
-         let sumar = carritoContent.querySelector(".sumar")
+         })
+          let sumar = carritoContent.querySelector(".sumar")
     
           sumar.addEventListener("click", ()=>{
         
@@ -123,25 +115,22 @@ const pintarCarrito = () =>{
         
           saveLocal()
           pintarCarrito()
-     })
+          })
 
-     let eliminar = document.createElement("span")
-     console.log(carrito.length);
-      eliminar.innerText="x"
-      eliminar.className="delete-product"
-      carritoContent.append(eliminar)
-
-      eliminar.addEventListener("click", eliminarProducto)
-       })
+   
+           })
 
      
-      const total = carrito.reduce((acc, el) => acc + el.precio *el.cantidad, 0)
-      const totalBuying = document.createElement("div")
-      totalBuying.className="total"
-      totalBuying.innerHTML = `Subtotal: ${total},00 €` 
-      console.log(total);
-      modalContainer.append(totalBuying)
-    }
+          const total = carrito.reduce((acc, el) => acc + el.precio *el.cantidad, 0)
+          const totalBuying = document.createElement("div")
+          subtotalCarrito.innerHTML=""
+          totalBuying.className="total"
+          totalBuying.innerHTML = `Subtotal: ${total},00 €` 
+          console.log(total);
+          modalContainer.append(totalBuying)
+          subtotalCarrito.append(totalBuying)
+
+          }
     
 
     window.addEventListener("load",pintarCarrito)

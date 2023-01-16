@@ -27,63 +27,60 @@
               <img " id="carBuy" src="./Assets/images/Carr.png" alt="Logo bag"><span id="cantidadCarrito"  class="cantidadCarrito"></span>
               <div id="countCar"></div>
             </div>
-            
-            
-            <div  class="carProducts" id="carProductsId">
-              <div>
-                  <div>
-                      <!-- <button onclick="closeBtn()" class="closeCar">X</button> -->
-                  </div>
-                  <!-- <div class="carAll">
-                      <div id="shopContent"      class="carAll"></div>
-                      <div id="modal-container"  class="modal-container"></div>
-                      
-                  </div> -->
-              </div>
-    
-              <div class="carItems">
-              </div>
-              <div>
-                  <hr>
-                  <!-- <h2>Total: <strong class="totalPrice"></strong>€</h2> -->
-              </div>
-          </div>
-   
-    
           </nav>
         </div>
       </nav>
-      <section id="home" class="row">
-        <h2>Cesta (2)</h2>
-       <h3>Productos</h3>
-        <div class="bagcoffe row">
-            
+        <section id="home" class="row">
+        <h2 class="cestacontador" id="cestacontador">Cesta</h2>
+        <article class="col divider">
+               <h3 class="product">Productos</h3>
+               <div class="carItems">
+               </div>
+               <div  class="carProducts" id="carProductsId">
+        
+               </div>
+               <div id="modal-container"  class="modal-container"></div>
+               <div id="shopContent"      class="carAll"></div>
+                    <h3 class="seleccionar">Seleccionar envío</h3>
+                    <input type="radio" id="envio" name="envio" value="envio">
+                    <label class="envio" for="envio">Envío 5-7 días</label>
+                     <h3>GRATIS</h3>
+                    <p>Opción estándar sin seguimiento</p>
+                     <hr>
+                    <input type="radio" id="envio" name="envio" value="enviourg">
+                    <label class="envio" for="enviourg">Envío urgente 24h</label>
+                    <h3>9.00 €</h3>
+                    <p class="recibe">Recibe tu pedido en las siguientes 24h (Para pedidos realizados antes de las 13:00).</p>
+          </article>
 
-                <div class="carAll">
-               
+          <article id="totalCarr" class="col totalCarr">
+
+           <h3>Total del carrito</h3>
+           <hr>
+           <div class="carAll" id="carAll">
+          <div id="total" class="total"></div>
+          </div>
+           <p>Envio</p>
+           <hr>
+           <p>Total</p> 
+           <a href="" class="boton">Ir al checkout</a>
+           <a href="./Tienda.html" class="boton2">Seguir comprando</a>
+           </article>
+       
+        
+        </section>
                 
-                <section id="total" class="total  row">
-                  <h3>Total del carrito</h3>
-                    <hr>  
-                     <p id="modal-container"  class="modal-container"></p>
-                     <p>Envio</p>
-                     
-                    <a href="">Total</a> 
-                    <a href="">Ir al checkout</a>
-<div id="shopContent"      class="carAll"></div>
-                </section>
-                
-            </div>
+            
     
             
          
             
-        </div>
+       
     
        
     
     
-        </article>
+        
       </section>
     <footer class="row" id="cpyr">
   <div class="col">

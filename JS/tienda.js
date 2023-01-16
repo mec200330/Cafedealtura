@@ -81,13 +81,12 @@
         const modalHeader = document.createElement("div")
          modalHeader.className = "carItems"
          modalHeader.innerHTML =`
-          <h3 class="carItems">Carrito</h3>
-          <a class="nav-link" href="./cesta2.html">Tramitar Pedido</a>
+        <a class="tramitar" href="./cesta.html">Tramitar Pedido</a>
      `
      modalContainer.append(modalHeader)
     
      const modalButton = document.createElement("h1")
-     modalButton.innerText="X"
+     modalButton.innerText="x"
      modalButton.className="carItems"
     
      modalHeader.append(modalButton)
@@ -102,14 +101,16 @@
      carrito.forEach((product)=>{
            
         let carritoContent = document.createElement("article")
+        carritoContent.className="items"
         carritoContent.innerHTML =`
         <img src="${product.img}">
         <h3>${product.nombre}</h3>
         <p>${product.precio},00 €</p>
         <span class="restar">-</span>
+        <p class="cantidad">Cantidad: ${product.cantidad}</p>
         <span class="sumar">+</span>
-        <p>Cantidad: ${product.cantidad}</p>
-        <p>Total:  ${product.cantidad*product.precio}, 00€</p>
+        <p>Total:  ${product.cantidad*product.precio},00€</p>
+        <span class="delete-product">❌</span>
         `
         modalContainer.append(carritoContent)
     
@@ -131,28 +132,26 @@
               pintarCarrito()
          })
     
-         let eliminar = document.createElement("span")
-         console.log(carrito.length);
-          eliminar.innerText="x"
-          eliminar.className="delete-product"
-          carritoContent.append(eliminar)
-    
-          eliminar.addEventListener("click", eliminarProducto)
-           })
+      let eliminar = carritoContent.querySelector(".delete-product")
+      eliminar.addEventListener("click", ()=>{
+        eliminarProducto(product.id)
+     })
+       
+         })
     
          
           const total = carrito.reduce((acc, el) => acc + el.precio *el.cantidad, 0)
           const totalBuying = document.createElement("div")
           totalBuying.className="total-content"
-          totalBuying.innerHTML = `Total a pagar:${total},00 €` 
+          totalBuying.innerHTML = `Total a pagar: ${total},00 €` 
           console.log(total);
           modalContainer.append(totalBuying)
         }
         
     
         verCarrito.addEventListener("click",pintarCarrito)
-        const eliminarProducto =()=>{
-        const foundId = carrito.find((element)=> element.id)
+        const eliminarProducto =(id)=>{
+        const foundId = carrito.find((element)=> element.id===id)
         carrito = carrito.filter((carritoId)=>{
             return carritoId !==foundId
         })

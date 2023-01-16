@@ -13,9 +13,10 @@ nav{
     align-items: center;
     
 }
-a:hover{
+.nav a:hover{
     color: white;
 }
+
 
 #navigation{
     font-family: 'Outfit';
@@ -86,6 +87,9 @@ padding: 12px 24px;
 background-color: #1F1815;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 4px;
+}
+.col a:hover{
+    color: white;
 }
 
 .bottom2{
@@ -676,89 +680,90 @@ left: 540.5px;
 top: 12px;
 }
 /* Carrito de Compra */
-/* #carProductsId{
-    display: none;
-} */
 
-/* #carBuy:hover{
-    margin-bottom: 16px;
-    transition-duration: .5s;
-} */
 
-.cartProducts{
-    position: absolute!important;
-    top: 82px;
-    right: -18px;
-    background-color: #fff;
+.modal-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    position:fixed;
+    top: 105px;
+    background: rgb(245, 243, 241);
     padding: 0 18px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
     display: none;
-
-    min-width: 290px;
-}
-
-.carProducts .item img{
-    width: 90px;
-}
-
-.carProducts .item{
-    display: flex;
-    align-items: center;
-    border-bottom: solid 2px #fff;
-}
-.carProducts .item .item-content{
-    margin: 0 19px;
-    width: 201px;
-}
-.carProducts .item .item-content h5{
-    margin: 0;
-    font-size: 15px;
-    font-weight: 400;
-    font-family: system-ui;
-}
-.carProducts .item .item-content h6{
-    margin: 0;
-    font-size: 13px;
-    font-weight: 400;
-    font-family: system-ui;
-}
-.carProducts .item span{
-    background-color: #fff;;
-    padding: 0px 5px;
-    border-radius: 50%;
-    color: #2B2A2B;
-    font-family: system-ui;
-    cursor: pointer;
-}
-.carProducts h3{
-    margin-bottom: 0;
-}
-.carProducts .item .item-content h5.cart-price{
-    font-weight: 700;
-}
-.modal-container{
-    position: absolute;
-    background-color:  #515051;
-    color: white;
-    min-width: 290px;
-    padding: 0 18px;
-    top: 70px;
-    right: 50px;
-    font-family: 'Outfit';
+    z-index: 1;
+    font-family: outfit;
+    color: #000000;
+    width: auto;
+    gap: 2px;
+    
 
 }
 
 .delete-product{
     cursor: pointer;
-    
+    top: -4px;
+    right: 1px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    padding: 1px 6px;
+    border-radius: 50%;
+    text-decoration: solid;
+    font-weight: 900;
+    font-size: 12px;
 }
-
+.items{
+  
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px rgb(26, 97, 8);
+}
 .sumar{
     cursor: pointer;
 }
 .restar{
     cursor: pointer;
 }
+.modal-container img{
+    display:list-item;
+    align-items: center;
+  width: 90px;
+}
+.modal-container h3{
+    margin: 0 14px;
+    width: 120px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: outfit;
+}
+.modal-container p {
+    margin: 0 10px;
+    width: 80px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: outfit;
+}
+.tramitar{
 
+    font-family: outfit;
+    font-size: 25px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #000;
+    
+}
+a:hover{
+    color: black;
+}
+.carItems h1{
+   
+    text-align: end;
+}
+
+.total-content{
+    font-size: 20px;
+}
 
 

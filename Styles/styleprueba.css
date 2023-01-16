@@ -1,0 +1,216 @@
+.sectionOne{
+    height: auto;
+    padding-top: 64px;
+    }
+    .sectionOne h2{
+    text-align: center;
+    color: #2A5B45;
+    text-shadow: 0px 4px 4px grey;
+    }
+    .productsCart{
+    display: flex;
+    flex-direction: row;
+    }
+    .totalCart{
+        width: 384px;
+        /* height: 280px; */
+        background-color: #F7F5F3;
+        align-items: flex-end;
+        text-align: left;
+        margin-left: 20px;
+        border-radius: 18px;
+    }
+    body{
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+    
+    nav{
+        display: flex;
+        background-color: rgb(26, 23, 23);
+        padding: 12px 40px;
+        justify-content:space-around;
+        align-items: center;
+        
+    }
+    .nav a:hover{
+        color: white;
+    }
+    
+    
+    #navigation{
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23.4628px;
+        line-height: 35px;
+        color: #FFFFFF;
+        opacity: 0.86;  
+        text-decoration: none;
+        
+    
+       
+    }
+    .nav-link{
+      
+       font-family: 'Outfit';
+       font-style: normal;
+       font-weight: 600;
+       font-size: 14px;
+       line-height: 16px;
+       color: #FFFFFF;
+       
+    }
+    .modal-container{
+        display: flex;
+        flex-direction: column;                 
+        align-content: center;
+        position:flex;
+        font-family: outfit;
+        color: #000000;
+        width: 700px;
+        gap: 2px;
+    }
+    .totalCarr{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 16px;
+    width: 384px;
+    height: 280px;
+    background: #F7F5F3;
+    left:816px;
+    margin-top: 156px;
+    
+    }
+    .divider{
+        
+        width: 776px;
+        top: 135.66px;
+        left: 8px;
+    }
+    .product{
+        margin-left: 48px;
+    margin-right: 1149px;
+        
+    }
+    .seleccionar{
+        margin-top: 239.32px;
+        margin-left: 48px;
+        margin: right 1089px;
+        flex: none;
+        order: 4;
+        flex-grow: 0;
+    
+    }
+    .delete-product{
+        cursor: pointer;
+    }
+    
+    .items{
+      
+        display: flex;
+        align-items: center;
+        border-bottom:  1px solid #E3DED7;
+    }
+    .modal-container img{
+        display:list-item;
+        align-items: center;
+      width: 55.66px;
+      height: 55.66px;
+    }
+    .sumar{
+        cursor: pointer;
+    }
+    .restar{
+        cursor: pointer;
+    }
+    
+    .totalCarr h3{
+        font-family: 'Outfit';
+        color:  #000000;
+        font-weight: 600;
+        size: 18px;
+        line-height: 24px;
+    }
+    
+    .divider h3{
+        width: 83px;
+    height: 24px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    }
+    .divider p{
+        width: 202px;
+    height: 16px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    }
+    .envio{
+        width: 88px;
+    height: 16px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    }
+    .recibe{
+    width: 509px;
+    height: 16px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    }
+    .items a{
+    width: 147px;
+    height: 16px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    align-items:baseline;
+    }
+    .total1 {
+    width: 54px;
+    height: 24px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    
+    }
+    .boton{
+    text-decoration: none;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    background-color:#2A5B45;
+    width: 129px;
+    height: 40px;
+    border-radius: 4px;
+    gap: 8px;
+    padding: 8px;
+    }
+    
